@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello world</title>
+    <style>
+      .spin {
+        animation: spin 2s linear infinite;
+      }
+
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .div {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div">
+      <h1 class="hello">Hello, World!</h1>
+      <button onclick="toggleSpin()">Click me</button>
+    </div>
+    <script>
+      function toggleSpin() {
+        var helloElement = document.querySelector('.hello');
+        helloElement.classList.toggle('spin');
+      }
+    </script>
+  </body>
+</html>
